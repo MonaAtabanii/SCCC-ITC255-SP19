@@ -8,3 +8,8 @@ class Payment():
         self.taxamount=round(self.taxamount, 2)
         response="Amount                        : " + str(self.paymentamount) + " $" + '\n' + "Tax                           : " + str(self.taxamount) + " $" +'\n' + "The total amount with tax     : "  + str(self.paymentamount+self.taxamount) + " $"
         return response
+
+    def __str__(self):
+        self.paymentamount=round(self.paymentamount,2)
+        response="Payment Amount: " + str(self.paymentamount) 
+        return response
